@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskManagerAPI", "TaskManagerAPI", "{758600A2-474C-44AE-AB47-05FBAC6B361C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskManagerApplication", "TaskManagerApplication", "{04CBECE8-0DAF-4CC1-8065-EC7FB75181C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagerAPI", "TaskManagerAPI\TaskManagerAPI\TaskManagerAPI.csproj", "{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8} = {758600A2-474C-44AE-AB47-05FBAC6B361C}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
