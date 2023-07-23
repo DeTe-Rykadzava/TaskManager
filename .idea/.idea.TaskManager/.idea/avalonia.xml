@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/App.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/AddEditTaskView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/DashboardView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/HomeView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/HomeViewModel.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/LoginView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Desktop/TaskManager.Desktop.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/MainView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/MainWindow.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/SignInUpView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Desktop/TaskManager.Desktop.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/TasksView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/VIewsUserControls/DashboardView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/VIewsUserControls/HomeView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/VIewsUserControls/LoginView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/VIewsUserControls/TasksView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/ViewsUserControls/DashboardView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/ViewsUserControls/HomeView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/ViewsUserControls/LoginView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+        <entry key="TaskManagerApplication/TaskManager/TaskManager/Views/ViewsUserControls/TasksView.axaml" value="TaskManagerApplication/TaskManager/TaskManager.Browser/TaskManager.Browser.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

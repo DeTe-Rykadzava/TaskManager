@@ -6,6 +6,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskManagerApplication", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagerAPI", "TaskManagerAPI\TaskManagerAPI\TaskManagerAPI.csproj", "{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManagerApplication\TaskManager\TaskManager\TaskManager.csproj", "{EADD7265-E8E6-426A-B959-4F0C04348027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Android", "TaskManagerApplication\TaskManager\TaskManager.Android\TaskManager.Android.csproj", "{2710D207-9EE7-4D3C-A882-11F5E70A0B45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Desktop", "TaskManagerApplication\TaskManager\TaskManager.Desktop\TaskManager.Desktop.csproj", "{32AD32B7-9ABF-4885-AA5F-508D2B118119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.iOS", "TaskManagerApplication\TaskManager\TaskManager.iOS\TaskManager.iOS.csproj", "{E4360AB8-895F-4962-BDF0-E42A547FBA54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Browser", "TaskManagerApplication\TaskManager\TaskManager.Browser\TaskManager.Browser.csproj", "{0A401BB1-BD23-4749-9585-9556B4DE00FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +23,36 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8} = {758600A2-474C-44AE-AB47-05FBAC6B361C}
+		{EADD7265-E8E6-426A-B959-4F0C04348027} = {04CBECE8-0DAF-4CC1-8065-EC7FB75181C7}
+		{2710D207-9EE7-4D3C-A882-11F5E70A0B45} = {04CBECE8-0DAF-4CC1-8065-EC7FB75181C7}
+		{32AD32B7-9ABF-4885-AA5F-508D2B118119} = {04CBECE8-0DAF-4CC1-8065-EC7FB75181C7}
+		{E4360AB8-895F-4962-BDF0-E42A547FBA54} = {04CBECE8-0DAF-4CC1-8065-EC7FB75181C7}
+		{0A401BB1-BD23-4749-9585-9556B4DE00FD} = {04CBECE8-0DAF-4CC1-8065-EC7FB75181C7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB4A8C98-02D8-4BE9-92A6-ABB3CFE18CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADD7265-E8E6-426A-B959-4F0C04348027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADD7265-E8E6-426A-B959-4F0C04348027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADD7265-E8E6-426A-B959-4F0C04348027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADD7265-E8E6-426A-B959-4F0C04348027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2710D207-9EE7-4D3C-A882-11F5E70A0B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2710D207-9EE7-4D3C-A882-11F5E70A0B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2710D207-9EE7-4D3C-A882-11F5E70A0B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2710D207-9EE7-4D3C-A882-11F5E70A0B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32AD32B7-9ABF-4885-AA5F-508D2B118119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AD32B7-9ABF-4885-AA5F-508D2B118119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AD32B7-9ABF-4885-AA5F-508D2B118119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AD32B7-9ABF-4885-AA5F-508D2B118119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4360AB8-895F-4962-BDF0-E42A547FBA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4360AB8-895F-4962-BDF0-E42A547FBA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4360AB8-895F-4962-BDF0-E42A547FBA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4360AB8-895F-4962-BDF0-E42A547FBA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A401BB1-BD23-4749-9585-9556B4DE00FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A401BB1-BD23-4749-9585-9556B4DE00FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A401BB1-BD23-4749-9585-9556B4DE00FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A401BB1-BD23-4749-9585-9556B4DE00FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

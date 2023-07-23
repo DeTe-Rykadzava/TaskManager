@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:TaskManager.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TaskManager.Views.HomeView"
+             x:DataType="vm:HomeViewModel">
+    <DockPanel>
+        
+        <Grid DockPanel.Dock="Bottom"
+              ColumnDefinitions="* *"
+              MaxHeight="35">
+            <RadioButton Grid.Column="0"
+                    Content="DBoard"
+                    FontSize="11"
+                    Command="{Binding ShowDashboardCommand}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+            <RadioButton Grid.Column="1"
+                    Content="Tasks"
+                    FontSize="11"
+                    Command="{Binding ShowTasksCommand}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+        </Grid>        
+        
+        <Panel>
+            <TextBlock Text="Выберите то что хотите увидеть!" 
+                       IsVisible="{Binding ViewModel,
+                        Converter={x:Static ObjectConverters.IsNull}}"/>
+            <ContentControl Content="{Binding ViewModel}"/>    
+        </Panel>
+    </DockPanel>
+</UserControl>
