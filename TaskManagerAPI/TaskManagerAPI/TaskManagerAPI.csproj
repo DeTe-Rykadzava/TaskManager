@@ -24,4 +24,30 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="obj\Debug\net7.0\apphost" />
+      <Content Include="obj\Debug\net7.0\staticwebassets.build.json" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.assets.cache" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.csproj.CopyComplete" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.csproj.CoreCompileInputs.cache" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.csproj.FileListAbsolute.txt" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.dll" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.genruntimeconfig.cache" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.MvcApplicationPartsAssemblyInfo.cache" />
+      <Content Include="obj\Debug\net7.0\TaskManagerAPI.pdb" />
+      <Content Include="obj\dotnet-aspnet-codegenerator" />
+      <Content Include="obj\project.assets.json" />
+      <Content Include="obj\project.nuget.cache" />
+      <Content Include="obj\rider.project.restore.info" />
+      <Content Include="obj\TaskManagerAPI.csproj.codegeneration.targets" />
+      <Content Include="obj\TaskManagerAPI.csproj.EntityFrameworkCore.targets" />
+      <Content Include="obj\TaskManagerAPI.csproj.nuget.dgspec.json" />
+      <Content Include="obj\TaskManagerAPI.csproj.nuget.g.props" />
+      <Content Include="obj\TaskManagerAPI.csproj.nuget.g.targets" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="obj\Debug\net7.0\TaskManagerAPI.MvcApplicationPartsAssemblyInfo.cs" />
+    </ItemGroup>
+
 </Project>
