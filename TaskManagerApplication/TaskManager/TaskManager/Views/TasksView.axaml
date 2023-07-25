@@ -6,5 +6,77 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="TaskManager.Views.TasksView"
              x:DataType="vm:TasksViewModel">
-    <TextBlock Text="tasks"/>
+    <Panel>
+        <Grid RowDefinitions="Auto *"
+              IsVisible="{Binding AddEditViewModel,
+                          Converter={x:Static ObjectConverters.IsNotNull}}">
+            <Button Grid.Row="0"
+                    Content="←"
+                    Padding="15 10"
+                    Command="{Binding GoBackCommand}"/>
+            <ContentControl Grid.Row="1"
+                            Content="{Binding AddEditViewModel}"/>
+        </Grid>
+        
+    <StackPanel IsVisible="{Binding AddEditViewModel,
+                            Converter={x:Static ObjectConverters.IsNull}}">
+        <DockPanel LastChildFill="True">
+            <Button DockPanel.Dock="Right"
+                    Content="Добавить задачу"
+                    Padding="20 10"
+                    Command="{Binding ShowAddEditCommand}"
+                    CommandParameter="{x:Null}"/>
+        
+            <TextBlock Margin="15"
+                       Text="Ваши задачи"
+                       FontWeight="Bold"
+                       FontSize="16"/>
+        </DockPanel>
+        <ListBox ItemsSource="{Binding Tasks}"
+                 Background="DarkGray">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border CornerRadius="8"
+                            BorderBrush="{x:Null}"
+                            Padding="15 10"
+                            Tag="{Binding Id}"
+                            Background="LightGray">
+                        <DockPanel LastChildFill="True"
+                                   >
+                            <!-- обращаемся к ViewModel потому что у этой кнопки 
+                            DataContext - TaskModel, мы его меняем и обращаемся к нужному свойству  -->
+                            <Button Content="..."
+                                    Padding="5"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Right"
+                                    DockPanel.Dock="Right"
+                                    Margin="10 0 0 0"
+                                    DataContext="{Binding $parent[UserControl].DataContext}"
+                                    Command="{Binding (vm:TasksViewModel).ShowAddEditCommand}"
+                                    CommandParameter="{Binding $parent[Border].Tag}"/>
+                            
+                            <StackPanel Orientation="Horizontal"
+                                        Spacing="20">
+                                <TextBlock Text="{Binding Title}"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding Description}"
+                                           TextWrapping="Wrap"
+                                           FontWeight="Light"
+                                           IsVisible="{Binding Description,
+                                           Converter={x:Static ObjectConverters.IsNotNull}}"/>
+                                <TextBlock Text="Описания нет..."
+                                           TextWrapping="Wrap"
+                                           FontWeight="Light"
+                                           IsVisible="{Binding Description,
+                                           Converter={x:Static ObjectConverters.IsNull}}"/>
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+    </Panel>
 </UserControl>

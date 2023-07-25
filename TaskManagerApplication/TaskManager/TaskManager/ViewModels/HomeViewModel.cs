@@ -31,7 +31,7 @@ public class HomeViewModel : ViewModelBase
         
         ShowTasksCommand = ReactiveCommand.Create(() =>
         {
-            ViewModel = new TasksViewModel(Tasks);
+            ViewModel = new TasksViewModel(Tasks, _user);
         });
         ShowDashboardCommand = ReactiveCommand.Create(() =>
         {

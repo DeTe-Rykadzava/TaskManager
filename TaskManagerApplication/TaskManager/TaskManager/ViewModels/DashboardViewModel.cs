@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using LiveChartsCore;
 using LiveChartsCore.Drawing;
+using LiveChartsCore.Measure;
+using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView.VisualElements;
 using SkiaSharp;
@@ -17,7 +19,7 @@ public class DashboardViewModel : ViewModelBase
 
     public int CountTodayTasks { get; } = 0;
 
-    public IEnumerable<ISeries> Series { get; set; }
+    public ISeries[] Series { get; set; } = Array.Empty<ISeries>();
 
     public LabelVisual Title { get; set; } = new LabelVisual()
     {
@@ -43,14 +45,24 @@ public class DashboardViewModel : ViewModelBase
             List<DiagramData> data = new List<DiagramData>();
             foreach (var status in statuses)
             {
-                data.Add();
+                data.Add(new DiagramData()
+                {
+                    StatusName = status.Name,
+                    CountTasks = Tasks.Count(c => c.Status == status)
+                });
             }
+
+            Series = new ISeries[data.Count];
+            for (int i = 0; i < Series.Count(); i++)
+            {
+                Series[i] = new PieSeries<int>{ Values = new []{data[i].CountTasks},
+                    Name = data[i].StatusName};
+            }
+
         }
         else
             ShowDiagram = false;
     }
-    
-    // Приложение 3.1
     
     public class DiagramData 
     {

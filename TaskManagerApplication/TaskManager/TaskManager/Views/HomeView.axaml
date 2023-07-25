@@ -28,7 +28,9 @@
         <Panel>
             <TextBlock Text="Выберите то что хотите увидеть!" 
                        IsVisible="{Binding ViewModel,
-                        Converter={x:Static ObjectConverters.IsNull}}"/>
+                        Converter={x:Static ObjectConverters.IsNull}}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
             <ContentControl Content="{Binding ViewModel}"/>    
         </Panel>
     </DockPanel>

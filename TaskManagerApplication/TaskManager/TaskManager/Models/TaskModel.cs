@@ -7,18 +7,31 @@ using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using ReactiveUI;
+using TaskManager.ViewModels;
 
 namespace TaskManager.Models;
 
-public class TaskModel
+public class TaskModel : INotifyPropertyChanged
 {
     public Guid Id { get; set; }
-
-    public string Title { get; set; }
     
-    public string? Description { get; set; }
+    [JsonIgnore]
+    private string _title;
+    
+    public string Title
+    {
+        get => _title;
+        set => SetField(ref _title, value);
+    }
 
-    // c этим могут возникнуть проблемы, которые могут затянуть на долго, пожалуй не будем делать их изменение
+    [JsonIgnore]
+    private string? _description = null;
+    public string? Description
+    {
+        get => _description;
+        set => SetField(ref _description, value);
+    }
 
     public TimeOnly StartTime { get; set; }
 
@@ -26,7 +39,8 @@ public class TaskModel
 
     public DateOnly Date { get; set; }
 
-    public TaskStatusModel? Status { get; set; }
+    public TaskStatusModel Status { get; set; }
+    
 
     public static async Task<IEnumerable<TaskModel>> GetTasks(Guid userId)
     {
@@ -150,4 +164,18 @@ public class TaskModel
         }
     }
 
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    protected bool SetField<T>(ref T field, T value, [CallerMemberName] string? propertyName = null)
+    {
+        if (EqualityComparer<T>.Default.Equals(field, value)) return false;
+        field = value;
+        OnPropertyChanged(propertyName);
+        return true;
+    }
 }

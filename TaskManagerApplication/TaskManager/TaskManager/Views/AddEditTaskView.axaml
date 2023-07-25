@@ -6,4 +6,66 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="TaskManager.Views.AddEditTaskView"
              x:DataType="vm:AddEditTaskViewModel">
+    <Panel VerticalAlignment="Center"
+           HorizontalAlignment="Center">
+        <StackPanel Spacing="25">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Title"/>
+                <TextBox Text="{Binding TaskAdding.Title}"
+                         IsVisible="{Binding TaskAdding,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+                <TextBox Text="{Binding TaskEdit.Title}"
+                         IsVisible="{Binding TaskEdit,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+            </StackPanel>
+            <StackPanel Spacing="10">
+                <TextBlock Text="Description"/>
+                <TextBox Text="{Binding TaskAdding.Description}"
+                         IsVisible="{Binding TaskAdding,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+                <TextBox Text="{Binding TaskEdit.Description}"
+                         IsVisible="{Binding TaskEdit,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+            </StackPanel>
+            <StackPanel Spacing="10"
+                        IsVisible="{Binding TaskAdding,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}">
+                <TextBlock Text="Start Time"/>
+                <TimePicker SelectedTime="{Binding TaskAdding.TimeStart}"
+                            ClockIdentifier="24HourClock"
+                            MinuteIncrement="5"/>
+            </StackPanel>
+            <StackPanel Spacing="10"
+                        IsVisible="{Binding TaskAdding,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}">
+                <TextBlock Text="End Time"/>
+                <TimePicker SelectedTime="{Binding TaskAdding.TimeEnd}"
+                            ClockIdentifier="24HourClock"
+                            MinuteIncrement="5"/>
+            </StackPanel>
+            <StackPanel Spacing="10"
+                        IsVisible="{Binding TaskAdding,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}">
+                <TextBlock Text="Date"/>
+                <DatePicker SelectedDate="{Binding TaskAdding.DateOffset}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Add"
+                        Background="DarkGreen"
+                        Command="{Binding AddCommand}"
+                        IsVisible="{Binding TaskAdding,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+                <Button Content="Edit"
+                        Background="OrangeRed"
+                        Command="{Binding EditCommand}"
+                        IsVisible="{Binding TaskEdit,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+                <Button Content="Delete"
+                        Background="DarkRed"
+                        Command="{Binding DeleteCommand}"
+                        IsVisible="{Binding TaskEdit,
+                                     Converter={x:Static ObjectConverters.IsNotNull}}"/>
+            </StackPanel>
+        </StackPanel>
+    </Panel>
 </UserControl>
